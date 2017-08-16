@@ -37,7 +37,8 @@ router.post('/api/customer/items/:itemId/purchases', function(request, response)
             machine.total += item.cost;
             machine.purchases.push(item, date);
             
-            money -= money -  item.cost;
+            money = money -  item.cost;
+          
 
             console.log(machine.purchases);
             return response.json({ status: "success", change:money})

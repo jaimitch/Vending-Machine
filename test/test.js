@@ -33,9 +33,9 @@ describe('Customer', function () {
             .expect("Content-Type", "application/json; charset=utf-8")
             .expect(function (response) {
 
-                let money = 65;
+                
 
-                assert.deepEqual(response.body, { status: "success", change: money });
+                assert.deepEqual(response.body, { status: "success", change: 0 });
             }).end(done)
     });
 
